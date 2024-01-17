@@ -1,0 +1,60 @@
+<div class="layout-row">
+  <section class="layout-column align-items-center justify-content-center">
+    <form [formGroup]="newForm">
+      <input
+        formControlName="name"
+        type="text"
+        data-test-id="app-input-name"
+        required
+        placeholder="Name"
+      />
+      <input
+        formControlName="genre"
+        type="text"
+        data-test-id="app-input-genre"
+        required
+        placeholder="Genre"
+      />
+      <input
+        formControlName="creator"
+        type="text"
+        data-test-id="app-input-creator"
+        required
+        placeholder="Creator"
+      />
+
+      <label
+        ><input
+          class="radioButton"
+          formControlName="type"
+          data-test-id="app-input-book-type"
+          type="radio"
+          name="type"
+          value="Book"
+        />Book</label
+      >
+      <label
+        ><input
+          formControlName="type"
+          class="radioButton"
+          data-test-id="app-input-song-type"
+          type="radio"
+          name="type"
+          value="Song"
+        />Song</label
+      >
+
+      <input
+        formControlName="totalTime"
+        data-test-id="app-input-time"
+        type="number"
+        placeholder="Total Time"
+      />
+    </form>
+  </section>
+  <section class="layout-row justify-content-center align-items-center">
+    <button data-test-id="add-button" class="w-30" (click)="addData()">
+      Add
+    </button>
+  </section>
+</div>
